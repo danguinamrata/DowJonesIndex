@@ -1,15 +1,14 @@
-package com.dangui.namrata;
+package com.stock.dowjonesindex;
 
-import java.util.Arrays;
-
+import com.stock.dowjonesindex.model.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import com.dangui.namrata.model.*;
 
+import java.util.Arrays;
 
 
 @SpringBootApplication

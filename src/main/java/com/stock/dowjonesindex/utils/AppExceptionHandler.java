@@ -1,4 +1,4 @@
-package com.dangui.namrata.utils;
+package com.stock.dowjonesindex.utils;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

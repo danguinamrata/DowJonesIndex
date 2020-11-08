@@ -1,4 +1,4 @@
-package com.dangui.namrata.model;
+package com.stock.dowjonesindex.model;
 
 import org.springframework.data.annotation.Id;
 

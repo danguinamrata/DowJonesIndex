@@ -1,13 +1,15 @@
-package com.dangui.namrata.controller;
+package com.stock.dowjonesindex.controller;
 
+import com.stock.dowjonesindex.model.Customer;
+import com.stock.dowjonesindex.model.CustomerRepository;
+import com.stock.dowjonesindex.utils.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 
-import com.dangui.namrata.model.*;
-import com.dangui.namrata.utils.*;
+
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,7 +37,7 @@ public class BasicController {
 
     @GetMapping("/customer")
     public String displayCustomer(Model model){
-        log.info("Showing Mongo Customer records .........................................");
+        log.info("Showing Mongo Customer records ......................................... ");
         List<Customer> result = new ArrayList<Customer>();
         for(Customer customer: repository.findByLastName("Dangui1") ) {
             result.add(customer);

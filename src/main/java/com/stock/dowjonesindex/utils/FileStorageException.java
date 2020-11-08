@@ -1,4 +1,4 @@
-package com.dangui.namrata.utils;
+package com.stock.dowjonesindex.utils;
 
 public class FileStorageException extends RuntimeException {
 

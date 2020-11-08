@@ -1,4 +1,4 @@
-package com.dangui.namrata.utils;
+package com.stock.dowjonesindex.utils;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
