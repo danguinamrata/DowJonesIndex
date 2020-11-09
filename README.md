@@ -61,8 +61,12 @@ The application will be started with by default on the 8080 port.
         
 ### \[GET\] & \[POST\] /uploadFile
     Bulk uploads a file containing mulitple records in the correct format to the application database.
-    Use the Get request to be re-directed to the UI screen where you can upload a file to be bulk-inserted into the application.
-    You can upload a .data/.csv or excel format.
+    Use the Get request to be re-directed to the UI screen where you can upload a file to be bulk-inserted 
+    into the application. You can upload a .data/.csv or .xls format files.
+    
+    On uploading a file and hitting the submit button, the post request is triggered which posts the file to 
+    the server and the records are saved into mongoDB.
+    
     
       
       
