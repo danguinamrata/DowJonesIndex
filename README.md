@@ -1,5 +1,5 @@
 # DowJonesIndex
-This is a simple RestAPI to query and maintain the Dow Jones Index stocks data.
+This is a simple RestAPI to query and maintain the [Dow Jones Index from 2011](http://archive.ics.uci.edu/ml/datasets/Dow+Jones+Index#)
 
 ### Setup Database
 Data storage by this application is in mongoDB which is hosted through a docker container. 
@@ -30,11 +30,12 @@ The application will be started with by default on the 8080 port.
 
 ##API calls and features
 
-* ###\[GET\] /stocks/?stock=\<stock\>
+###\[GET\] /stocks/?stock=\<stock\>
+
       Lists the  stocks currently in the application database filtered by the <stock> value.
       The output is displayed in a JSON format
 
-* ###\[POST\] /stocks
+###\[POST\] /stocks
       This will insert a record into the application database.
       The record is provided in the request body in JSON format.    
       Sample JSON :-
@@ -58,9 +59,10 @@ The application will be started with by default on the 8080 port.
             "percent_return_next_dividend": 0.182704
         }
         
-* ###\[GET\] & \[POST\] /uploadFile
-  Bulk uploads a file containing mulitple records in the correct format to the application database.
-  Use the Get request to be re-directed to the UI screen where you can upload a file to be bulk-inserted into the application.
-  
+###\[GET\] & \[POST\] /uploadFile
+    Bulk uploads a file containing mulitple records in the correct format to the application database.
+    Use the Get request to be re-directed to the UI screen where you can upload a file to be bulk-inserted into the application.
+    You can upload a .data/.csv or excel format.
+    
       
       
