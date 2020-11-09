@@ -26,8 +26,9 @@ public class StockController {
         ObjectMapper Obj = new ObjectMapper();
 
         try {
+            log.info("The count of records found is " + stockEntities.size());
             final String result = Obj.writeValueAsString(stockEntities);
-            log.debug(result);
+
             return result;
         } catch (JsonProcessingException e) {
             e.printStackTrace();
@@ -47,7 +48,6 @@ public class StockController {
 
         try {
             final String result = Obj.writeValueAsString(saved);
-            log.debug(result);
             return result;
         } catch (JsonProcessingException e) {
             e.printStackTrace();
