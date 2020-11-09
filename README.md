@@ -28,7 +28,7 @@ java -jar DowJonesIndex-1.0-SNAPSHOT.jar
 The application will be started with by default on the 8080 port.
 
 
-##API calls and features
+## API calls and features
 
 ###\[GET\] /stocks/?stock=\<stock\>
 
