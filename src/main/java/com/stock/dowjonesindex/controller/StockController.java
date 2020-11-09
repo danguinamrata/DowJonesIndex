@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class StockController {
     StockRepository stockRepository;
 
     @GetMapping
-    public String retrieve(@RequestParam(value = "stock", defaultValue = "") String stock) {
+    public ResponseEntity<String> retrieve(@RequestParam(value = "stock", defaultValue = "") String stock) {
         log.info("Showing Mongo Stocks records ......................................... ");
         List<StockEntity> stockEntities = stockRepository.findByStock(stock);
         ObjectMapper Obj = new ObjectMapper();
@@ -28,8 +29,8 @@ public class StockController {
         try {
             log.info("The count of records found is " + stockEntities.size());
             final String result = Obj.writeValueAsString(stockEntities);
-
-            return result;
+            return ResponseEntity.ok()
+                    .body(result);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -41,14 +42,15 @@ public class StockController {
             consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE}
     )
-    public String create(@RequestBody StockEntity stockEntity) {
+    public ResponseEntity<String> create(@RequestBody StockEntity stockEntity) {
         log.info("Showing Mongo Stocks records ......................................... ");
         final StockEntity saved = stockRepository.save(stockEntity);
         ObjectMapper Obj = new ObjectMapper();
 
         try {
             final String result = Obj.writeValueAsString(saved);
-            return result;
+            return ResponseEntity.ok()
+                    .body(result);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
