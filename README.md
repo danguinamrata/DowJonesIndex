@@ -30,12 +30,13 @@ The application will be started with by default on the 8080 port.
 
 ## API calls and features
 
-### \[GET\] /stocks/?stock=\<stock\>
+### \[GET\] /stocks?stock=\<stock\>
 
       Lists the  stocks currently in the application database filtered by the <stock> value.
       The output is displayed in a JSON format
 
 ### \[POST\] /stocks
+
       This will insert a record into the application database.
       The record is provided in the request body in JSON format.    
       Sample JSON :-

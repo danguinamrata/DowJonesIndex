@@ -85,11 +85,6 @@ public class FileService {
         return stockEntities;
     }
 
-    public static void main(String[] args) {
-        FileService fs = new FileService();
-        String fileName = "/home/shashank" + File.separator + "dow_jones_index.data";
-        fs.readFile(fileName);
 
-    }
 
 }
