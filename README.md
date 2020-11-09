@@ -30,7 +30,7 @@ java -jar DowJonesIndex-1.0-SNAPSHOT.jar
 ``` 
 The application will be started with by default on the 8080 port.
 
-##API calls and features
+###API calls and features
 
 * ###\[GET\] /stocks/?stock=<stock>
       Lists the  stocks currently in the application database filtered by the <stock> value.
@@ -38,8 +38,7 @@ The application will be started with by default on the 8080 port.
 
 * ###\[POST\] /stocks
       This will insert a record into the application database.
-      The record is provided in the request body in JSON format.
-       
+      The record is provided in the request body in JSON format.    
       Sample JSON :-
       
         {
