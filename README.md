@@ -20,19 +20,17 @@ storage directory you mention for the -v flag above *(<storage_dir_path>)*
 At the application directory level , you can run a clean install to build the application JAR
 ```
 mvn clean install
-
 ```
-
 This will create a JAR file of the application which can be executed as a normal JAR file. 
-
 ```
 java -jar DowJonesIndex-1.0-SNAPSHOT.jar
 ``` 
 The application will be started with by default on the 8080 port.
 
-###API calls and features
 
-* ###\[GET\] /stocks/?stock=<stock>
+##API calls and features
+
+* ###\[GET\] /stocks/?stock=\<stock\>
       Lists the  stocks currently in the application database filtered by the <stock> value.
       The output is displayed in a JSON format
 
