@@ -9,8 +9,8 @@
         <version>2.3.3.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>org.dangui.namrata</groupId>
-    <artifactId>NamrataAssignment02</artifactId>
+    <groupId>com.dowjones.index</groupId>
+    <artifactId>DowJonesIndex</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>RBC Assignment</name>
     <description>RBC take home assignment attempt</description>

@@ -53,7 +53,6 @@ public class UploadController {
 
     @GetMapping("/uploadFile")
     public String uploadGet() {
-        log.info("I am here finally ..............");
         return "upload";
     }
 
